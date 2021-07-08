@@ -1,0 +1,16 @@
+img{
+    height: 100%;
+}
+
+.detail-wrapper{
+    height: 400px;
+    text-align: center;
+}
+
+.detail-parent{
+    text-align: center;
+}
+
+.detail-child{
+    display: inline-block; 
+}

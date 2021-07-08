@@ -1,0 +1,34 @@
+{
+    "movies": [
+      { "id": 1, "title": "Dark Knight"},
+      { "id": 2, "title": "Django Unchained"},
+      { "id": 3, "title": "Edge of tomorrow"},
+      { "id": 4, "title": "Gladiator"},
+      { "id": 5, "title": "Gran Torino"},
+      { "id": 6, "title": "Inception"},
+      { "id": 7, "title": "Inglorious Basterds"},
+      { "id": 8, "title": "Jaws"},
+      { "id": 9, "title": "Pulp Fiction"},
+      { "id": 10, "title": "Requiem for a dream"},
+      { "id": 11, "title": "Shawshank Redemption"},
+      { "id": 12, "title": "The Godfather"}
+    ],
+    "tvshows": [
+        { "id": 1, "title": "24"},
+        { "id": 2, "title": "Better call Saul"},
+        { "id": 3, "title": "Criminal Minds"},
+        { "id": 4, "title": "Game of Thrones"},
+        { "id": 5, "title": "Invincible"},
+        { "id": 6, "title": "Law and Order"},
+        { "id": 7, "title": "Longmire"},
+        { "id": 8, "title": "Peppa Pig"},
+        { "id": 9, "title": "Rick and Morty"},
+        { "id": 10, "title": "Roseanne"},
+        { "id": 11, "title": "The Simpsons"},
+        { "id": 12, "title": "The Walking Dead"}
+      ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }

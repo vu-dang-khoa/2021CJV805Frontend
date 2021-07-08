@@ -1,0 +1,17 @@
+hr{
+  background-color: rgba(70,71,153,1)
+}
+
+.mainDiv{
+  position: relative;
+  background-color: rgb(12, 10, 4);
+  height:100%;
+  width:100%;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+
+.wrapper{
+  margin-top:5em;
+}

@@ -1,0 +1,14 @@
+.featuredItem{
+    height:150px
+}
+
+.container{
+    margin-left: 1em;
+    margin-right: 1em;
+    display: block;
+    text-align: center;
+}
+
+.inner-container{
+    display: inline-block;
+}
