@@ -28,7 +28,7 @@ const SignupForm = () => {
                 <br/>
 
                 <input type="checkbox" id="checkbox-1-1" className="custom-checkbox" />
-                <label for="checkbox-1-1">I certify that i am at least 18 years old and that i agree to the <a href="#" onClick="return false;">Terms and Policies</a></label>
+                <label for="checkbox-1-1">I certify that i am at least 18 years old and that i agree to the <a className="term-and-policy" href="#" onClick="return false;">Terms and Policies</a></label>
     
                 <button className="signin">
                     <b>Sign Up</b>
