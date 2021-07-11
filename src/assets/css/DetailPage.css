@@ -1,10 +1,12 @@
 img{
-    height: 100%;
+    max-height: 100%;
+    max-width:  600px;
 }
 
 .detail-wrapper{
     height: 400px;
     text-align: center;
+    margin:4em;
 }
 
 .detail-parent{
@@ -13,4 +15,46 @@ img{
 
 .detail-child{
     display: inline-block; 
+}
+
+.movie-title{
+    text-decoration: underline;
+}
+
+.inline-block{
+    display: inline-block;
+    margin-left:5em;
+    margin-right:5em;
+}
+
+.buy-rent-button{
+    display: inline-block;
+    margin-left:2em;
+    margin-right:2em;
+    background-color: #1161ed;
+    color: black;
+    width: 20%;
+    padding: 10px 20px;
+    height: 39px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all 0.5s ease-in-out;
+    border: none;
+
+}
+
+.buy-rent-button:hover {
+    background: #4082f5;
+    box-shadow: 0px 4px 35px -5px #4082f5;
+    cursor: pointer;
+  }
+  
+  .buy-rent-button:focus {
+    outline: none;
+  }
+  
+
+#buttons-wrapper{
+    height: 100px !important;
+    margin:1em !important;
 }

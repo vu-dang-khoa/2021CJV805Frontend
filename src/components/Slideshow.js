@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'; 
 
 
+import Poster from './Poster';
 
 import '../assets/css/Slideshow.css';
 
@@ -13,15 +14,16 @@ Retrieved from https://tinloof.com/blog/how-to-build-an-auto-play-slideshow-with
 
 
 
-//const images = [test,test1];
 const delay = 2500;
 
 const Slideshow = (props)=>{
 
-  var images = props.array;
+  var images=[];
+  for (let i=0;i<props.array.length;i++){
+    images.push(props.array[i].image);
+  }
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
-  //console.log(images);
   function resetTimeout() {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -49,10 +51,10 @@ const Slideshow = (props)=>{
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {images.map((item, index) => (
+        {props.array.map((item, index) => (
             
           <div className="slide" key={index}>
-              <img className="slideImg" src={item} alt = {index}></img>
+              <Poster className="slideImg" item={item}/>
           </div>
         ))}
       </div>

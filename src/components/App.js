@@ -10,7 +10,7 @@ import Slideshow from './Slideshow.js';
 import Context from '../context/Context.js';
 
 import Homepage from '../pages/Homepage';
-import MoviesPage from '../pages/MoviesPage';
+import ListingPage from '../pages/ListingPage.js';
 import SigninPage from '../pages/SigninPage.js';
 import SignupPage from '../pages/SignupPage.js';
 import DetailPage from '../pages/DetailPage';
@@ -19,48 +19,49 @@ import '../assets/css/App.css';
 
 
 
+
 const App = () => {
 
-  const fetchPostersInOrder = ()=>{
-    let promises = [];
-       for (let i=0;i<moviesInfo.length;i++) {
-            promises.push(()=>{
   
-            });
-       }
-       return Promise.all(promises);
-  }
-  
-  const [moviesInfo,setMoviesInfo] = useState([]);
-  const [moviePosters,setMoviePosters] = useState([]);
-  const [tvshowsInfo,setTvshowsInfo] = useState([]);
-  const [tvshowPosters,setTvshowPosters] = useState([]);
-    fetch("http://localhost:5000/movies").then(res=>{
+  var [moviesInfo,setMoviesInfo] = useState([]);
+  var [moviePosters,setMoviePosters] = useState([]);
+  var [tvshowsInfo,setTvshowsInfo] = useState([]);
+  var [tvshowPosters,setTvshowPosters] = useState([]);
+
+  //movies
+  if (moviesInfo.length==0){
+    fetch("https://frozen-eyrie-11666.herokuapp.com/movies").then(res=>{
       var temp = res.clone();
       return temp.json();
     }).then(json=>{
-      if (moviesInfo.length==0 || moviePosters.length==0){
-        setMoviesInfo(json);
-      }else {
-        return Promise.reject("filled");
-      }
-      
-
+      moviesInfo=json;
+      console.log(json);
+      setMoviesInfo(json);
     }).then(()=>{
+      var moviesURLArray = [];
+
       for (let i=0;i<moviesInfo.length;i++){
         var tempTitle= moviesInfo[i].title.replace(/\s/g, "");
-        
-        var tempURL = "http://localhost:5000/moviePosters/" + tempTitle + ".jpg";
-        
-        fetch(tempURL).then((res)=>{
+        var tempURL = "https://frozen-eyrie-11666.herokuapp.com/moviePosters/" + tempTitle + ".jpg";
+        moviesURLArray.push(tempURL);
+      }
+      return moviesURLArray;
+    }).then((moviesURLArray)=>{
+      for (let i=0;i<moviesURLArray.length;i++){
+        fetch(moviesURLArray[i]).then((res)=>{
           return res.blob();
         }).then((image)=>{
-          if (moviePosters.length<moviesInfo.length){
             var outside = URL.createObjectURL(image);
-          var temp = moviePosters;
-          temp.push(outside);
-          setMoviePosters(temp);
+            moviesInfo[i].image=outside;
+        }).then(()=>{
+          var temp = [];
+          for (let i=0;i<moviesInfo.length;i++){
+            temp.push(moviesInfo[i].image);
           }
+          return temp;
+        }).then((temp)=>{
+          moviePosters=temp;
+          setMoviePosters(temp);
         }).catch(err=>{
           console.log(err);
         })
@@ -68,31 +69,41 @@ const App = () => {
     }).catch(err=>{
       console.log(err);
     })
+  }
 
-    fetch("http://localhost:5000/tvshows").then(res=>{
-      return res.json();
+  //tvshows
+  if (tvshowsInfo.length==0){
+    fetch("https://frozen-eyrie-11666.herokuapp.com/tvshows").then(res=>{
+      var temp = res.clone();
+      return temp.json();
     }).then(json=>{
-      if (tvshowsInfo.length==0 || tvshowPosters.length==0){
-        setTvshowsInfo(json);
-      }else {
-        return Promise.reject("filled");
-      }
-      
+      tvshowsInfo=json;
+      setTvshowsInfo(json);
     }).then(()=>{
+      var tvshowsURLArray = [];
+
       for (let i=0;i<tvshowsInfo.length;i++){
         var tempTitle= tvshowsInfo[i].title.replace(/\s/g, "");
-
-        var tempURL = "http://localhost:5000/tvshowPosters/" + tempTitle + ".jpg";
-        
-        fetch(tempURL).then((res)=>{
+        var tempURL = "https://frozen-eyrie-11666.herokuapp.com/tvshowPosters/" + tempTitle + ".jpg";
+        tvshowsURLArray.push(tempURL);
+      }
+      return tvshowsURLArray;
+    }).then((tvshowsURLArray)=>{
+      for (let i=0;i<tvshowsURLArray.length;i++){
+        fetch(tvshowsURLArray[i]).then((res)=>{
           return res.blob();
         }).then((image)=>{
-          if (tvshowPosters.length<tvshowsInfo.length){
             var outside = URL.createObjectURL(image);
-            var temp = tvshowPosters;
-            temp.push(outside);
-            setTvshowPosters(temp);
+            tvshowsInfo[i].image=outside;
+        }).then(()=>{
+          var temp = [];
+          for (let i=0;i<tvshowsInfo.length;i++){
+            temp.push(tvshowsInfo[i].image);
           }
+          return temp;
+        }).then((temp)=>{
+          tvshowPosters=temp;
+          setTvshowPosters(temp);
         }).catch(err=>{
           console.log(err);
         })
@@ -100,10 +111,10 @@ const App = () => {
     }).catch(err=>{
       console.log(err);
     })
-  
+  }
+
+
     
-
-
   return (
 
       <Router>
@@ -116,11 +127,11 @@ const App = () => {
           <Route exact path="/">
             <Homepage/>
           </Route>
-          <Route path="/movies">
-            <MoviesPage/>
+          <Route exact path="/movies">
+            <ListingPage array={moviesInfo}/>
           </Route>
-          <Route path="/tvshows">
-            
+          <Route exact path="/tvshows">
+            <ListingPage array={tvshowsInfo}/>
           </Route>
           <Route exact path="/signin">
             <SigninPage/>
@@ -130,8 +141,13 @@ const App = () => {
           </Route>
           
           {moviesInfo.map((item, index) => (
-          <Route path={"/"+item.title.replace(/\s/g, "")}>
-              <DetailPage image={moviePosters[index]} info={item}/>
+          <Route path={"/movies/"+item.id}>
+              <DetailPage item={item}/>
+          </Route>
+            ))}
+          {tvshowsInfo.map((item, index) => (
+          <Route path={"/tvshows/"+item.id}>
+              <DetailPage item={item}/>
           </Route>
             ))}
           </Context.Provider>

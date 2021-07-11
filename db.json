@@ -1,34 +1,132 @@
 {
-    "movies": [
-      { "id": 1, "title": "Dark Knight"},
-      { "id": 2, "title": "Django Unchained"},
-      { "id": 3, "title": "Edge of tomorrow"},
-      { "id": 4, "title": "Gladiator"},
-      { "id": 5, "title": "Gran Torino"},
-      { "id": 6, "title": "Inception"},
-      { "id": 7, "title": "Inglorious Basterds"},
-      { "id": 8, "title": "Jaws"},
-      { "id": 9, "title": "Pulp Fiction"},
-      { "id": 10, "title": "Requiem for a dream"},
-      { "id": 11, "title": "Shawshank Redemption"},
-      { "id": 12, "title": "The Godfather"}
-    ],
-    "tvshows": [
-        { "id": 1, "title": "24"},
-        { "id": 2, "title": "Better call Saul"},
-        { "id": 3, "title": "Criminal Minds"},
-        { "id": 4, "title": "Game of Thrones"},
-        { "id": 5, "title": "Invincible"},
-        { "id": 6, "title": "Law and Order"},
-        { "id": 7, "title": "Longmire"},
-        { "id": 8, "title": "Peppa Pig"},
-        { "id": 9, "title": "Rick and Morty"},
-        { "id": 10, "title": "Roseanne"},
-        { "id": 11, "title": "The Simpsons"},
-        { "id": 12, "title": "The Walking Dead"}
-      ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+	"movies": [{
+			"id": 1,
+			"title": "Dark Knight",
+			"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+		},
+		{
+			"id": 2,
+			"title": "Django Unchained",
+			"description": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi."
+		},
+		{
+			"id": 3,
+			"title": "Edge of tomorrow",
+			"description": "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies."
+		},
+		{
+			"id": 4,
+			"title": "Gladiator",
+			"description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+		},
+		{
+			"id": 5,
+			"title": "Gran Torino",
+			"description": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino."
+		},
+		{
+			"id": 6,
+			"title": "Inception",
+			"description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+		},
+		{
+			"id": 7,
+			"title": "Inglorious Basterds",
+			"description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same."
+		},
+		{
+			"id": 8,
+			"title": "Jaws",
+			"description": "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
+		},
+		{
+			"id": 9,
+			"title": "Pulp Fiction",
+			"description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+		},
+		{
+			"id": 10,
+			"title": "Requiem for a dream",
+			"description": "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep."
+		},
+		{
+			"id": 11,
+			"title": "Shawshank Redemption",
+			"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+		},
+		{
+			"id": 12,
+			"title": "The Godfather",
+			"description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son."
+		}
+	],
+	"tvshows": [{
+			"id": 1,
+			"title": "24",
+			"description": "Jack Bauer races against the clock to subvert terrorist plots and save his nation from ultimate disaster."
+		},
+		{
+			"id": 2,
+			"title": "Better call Saul",
+			"description": "The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico."
+		},
+		{
+			"id": 3,
+			"title": "Criminal Minds",
+			"description": "The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nation's most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again."
+		},
+		{
+			"id": 4,
+			"title": "Game of Thrones",
+			"description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia."
+		},
+		{
+			"id": 5,
+			"title": "Invincible",
+			"description": "An adult animated series based on the Skybound/Image comic about a teenager whose father is the most powerful superhero on the planet."
+		},
+		{
+			"id": 6,
+			"title": "Law and Order",
+			"description": "Follows a crime (usually a murder), usually adapted from current headlines, from two separate vantage points, the police investigation and the prosecution in court."
+		},
+		{
+			"id": 7,
+			"title": "Longmire",
+			"description": "Walt Longmire is the dedicated and unflappable sheriff of Absaroka County, Wyoming. Widowed only a year, he is a man in psychic repair but buries his pain behind his brave face, unassuming grin and dry wit."
+		},
+		{
+			"id": 8,
+			"title": "Peppa Pig",
+			"description": "A little pig named Peppa and her little brother George have journeys everyday with their family and friends."
+		},
+		{
+			"id": 9,
+			"title": "Rick and Morty",
+			"description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."
+		},
+		{
+			"id": 10,
+			"title": "Roseanne",
+			"description": "A revival of the popular 1990s sitcom Roseanne , which centered on the everyday life of an American working-class family."
+		},
+		{
+			"id": 11,
+			"title": "The Simpsons",
+			"description": "The satiric adventures of a working-class family in the misfit city of Springfield."
+		},
+		{
+			"id": 12,
+			"title": "The Walking Dead",
+			"description": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive."
+		}
+	],
+	"comments": [{
+		"id": 1,
+		"body": "some comment",
+		"postId": 1
+	}],
+	"profile": {
+		"name": "typicode"
+	}
+}
