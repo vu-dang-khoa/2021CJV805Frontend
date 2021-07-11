@@ -2,131 +2,195 @@
 	"movies": [{
 			"id": 1,
 			"title": "Dark Knight",
-			"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+			"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+			"category": "movies",
+			"rent": 11,
+			"buy": 21
 		},
 		{
 			"id": 2,
 			"title": "Django Unchained",
-			"description": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi."
+			"description": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
+			"category": "movies",
+			"rent": 12,
+			"buy": 22
 		},
 		{
 			"id": 3,
 			"title": "Edge of tomorrow",
-			"description": "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies."
+			"description": "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.",
+			"category": "movies",
+			"rent": 13,
+			"buy": 23
 		},
 		{
 			"id": 4,
 			"title": "Gladiator",
-			"description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+			"description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+			"category": "movies",
+			"rent": 14,
+			"buy": 24
 		},
 		{
 			"id": 5,
 			"title": "Gran Torino",
-			"description": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino."
+			"description": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
+			"category": "movies",
+			"rent": 15,
+			"buy": 25
 		},
 		{
 			"id": 6,
 			"title": "Inception",
-			"description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+			"description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+			"category": "movies",
+			"rent": 16,
+			"buy": 26
 		},
 		{
 			"id": 7,
 			"title": "Inglorious Basterds",
-			"description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same."
+			"description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+			"category": "movies",
+			"rent": 17,
+			"buy": 27
 		},
 		{
 			"id": 8,
 			"title": "Jaws",
-			"description": "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down."
+			"description": "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.",
+			"category": "movies",
+			"rent": 18,
+			"buy": 28
 		},
 		{
 			"id": 9,
 			"title": "Pulp Fiction",
-			"description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+			"description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+			"category": "movies",
+			"rent": 19,
+			"buy": 29
 		},
 		{
 			"id": 10,
 			"title": "Requiem for a dream",
-			"description": "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep."
+			"description": "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",
+			"category": "movies",
+			"rent": 10,
+			"buy": 20
 		},
 		{
 			"id": 11,
 			"title": "Shawshank Redemption",
-			"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+			"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+			"category": "movies",
+			"rent": 11,
+			"buy": 21
 		},
 		{
 			"id": 12,
 			"title": "The Godfather",
-			"description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son."
+			"description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+			"category": "movies",
+			"rent": 12,
+			"buy": 22
 		}
 	],
 	"tvshows": [{
 			"id": 1,
 			"title": "24",
-			"description": "Jack Bauer races against the clock to subvert terrorist plots and save his nation from ultimate disaster."
+			"description": "Jack Bauer races against the clock to subvert terrorist plots and save his nation from ultimate disaster.",
+			"category": "tvshows" ,
+			"rent": 21,
+			"buy": 41
 		},
 		{
 			"id": 2,
 			"title": "Better call Saul",
-			"description": "The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico."
+			"description": "The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico.",
+			"category": "tvshows" ,
+			"rent": 22,
+			"buy": 42
 		},
 		{
 			"id": 3,
 			"title": "Criminal Minds",
-			"description": "The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nation's most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again."
+			"description": "The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nation's most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again.",
+			"category": "tvshows" ,
+			"rent": 23,
+			"buy": 43
 		},
 		{
 			"id": 4,
 			"title": "Game of Thrones",
-			"description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia."
+			"description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+			"category": "tvshows" ,
+			"rent": 4,
+			"buy": 4
 		},
 		{
 			"id": 5,
 			"title": "Invincible",
-			"description": "An adult animated series based on the Skybound/Image comic about a teenager whose father is the most powerful superhero on the planet."
+			"description": "An adult animated series based on the Skybound/Image comic about a teenager whose father is the most powerful superhero on the planet.",
+			"category": "tvshows" ,
+			"rent": 5,
+			"buy": 5
 		},
 		{
 			"id": 6,
 			"title": "Law and Order",
-			"description": "Follows a crime (usually a murder), usually adapted from current headlines, from two separate vantage points, the police investigation and the prosecution in court."
+			"description": "Follows a crime (usually a murder), usually adapted from current headlines, from two separate vantage points, the police investigation and the prosecution in court.",
+			"category": "tvshows" ,
+			"rent": 6,
+			"buy": 6
 		},
 		{
 			"id": 7,
 			"title": "Longmire",
-			"description": "Walt Longmire is the dedicated and unflappable sheriff of Absaroka County, Wyoming. Widowed only a year, he is a man in psychic repair but buries his pain behind his brave face, unassuming grin and dry wit."
+			"description": "Walt Longmire is the dedicated and unflappable sheriff of Absaroka County, Wyoming. Widowed only a year, he is a man in psychic repair but buries his pain behind his brave face, unassuming grin and dry wit.",
+			"category": "tvshows" ,
+			"rent": 7,
+			"buy": 7
 		},
 		{
 			"id": 8,
 			"title": "Peppa Pig",
-			"description": "A little pig named Peppa and her little brother George have journeys everyday with their family and friends."
+			"description": "A little pig named Peppa and her little brother George have journeys everyday with their family and friends.",
+			"category": "tvshows" ,
+			"rent": 88,
+			"buy": 188
 		},
 		{
 			"id": 9,
 			"title": "Rick and Morty",
-			"description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."
+			"description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",
+			"category": "tvshows" ,
+			"rent": 29,
+			"buy": 49
 		},
 		{
 			"id": 10,
 			"title": "Roseanne",
-			"description": "A revival of the popular 1990s sitcom Roseanne , which centered on the everyday life of an American working-class family."
+			"description": "A revival of the popular 1990s sitcom Roseanne , which centered on the everyday life of an American working-class family.",
+			"category": "tvshows" ,
+			"rent": 20,
+			"buy": 40
 		},
 		{
 			"id": 11,
 			"title": "The Simpsons",
-			"description": "The satiric adventures of a working-class family in the misfit city of Springfield."
+			"description": "The satiric adventures of a working-class family in the misfit city of Springfield.",
+			"category": "tvshows" ,
+			"rent": 26,
+			"buy": 46
 		},
 		{
 			"id": 12,
 			"title": "The Walking Dead",
-			"description": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive."
+			"description": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.",
+			"category": "tvshows" ,
+			"rent": 25,
+			"buy": 45
 		}
-	],
-	"comments": [{
-		"id": 1,
-		"body": "some comment",
-		"postId": 1
-	}],
-	"profile": {
-		"name": "typicode"
-	}
+	]
 }
