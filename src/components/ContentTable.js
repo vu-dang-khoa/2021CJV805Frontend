@@ -9,7 +9,7 @@ const ContentTable = (props) => {
 
       return (
         <div>
-          <table>
+          <table style={{margin:"auto"}}>
             
             {props.array.slice(0, props.array.length).map((item, index) => {
                 return (<tr>

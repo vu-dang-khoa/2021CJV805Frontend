@@ -7,8 +7,12 @@ img{
     height: 400px;
     text-align: center;
     margin:4em;
+    
 }
 
+.transparent-grey-bg{
+    background-color: rgba(110, 110, 110, 0.73);
+}
 .detail-parent{
     text-align: center;
 }

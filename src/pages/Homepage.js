@@ -13,12 +13,58 @@ import '../assets/css/App.css';
 
 const Homepage = () => {
     
+    const {user,setUser} = useContext(context);
     const {moviesInfo,setMoviesInfo} = useContext(context);
     const {tvshowsInfo,setTvshowsInfo} = useContext(context);
     const {moviePosters,setMoviePosters} = useContext(context);
     const {tvshowPosters,setTvshowPosters} = useContext(context);
-    const [heroSectionArray,setHeroSectionArray] = useState(moviesInfo.slice(0,6).concat(tvshowsInfo.slice(0,6)));
-    const [contentSectionArray,setContentSectionArray] = useState(tvshowsInfo.slice(7,11));
+    var [featuredMoviesInfo,setFeaturedMoviesInfo] = useState([]);
+    var [featuredTvshowsInfo,setFeaturedTvshowsInfo] = useState([]);
+    const [heroSectionArray,setHeroSectionArray] = useState([]);
+    const [contentSectionArray,setContentSectionArray] = useState([]);
+    
+
+
+        if (featuredMoviesInfo.length==0){
+            fetch("https://agile-mountain-03205.herokuapp.com/movies/featured",{
+                mode: 'cors'
+              }).then(res=>{
+                console.log("---------------------------------\n"+"-------------------------------------------------------------")
+                console.log(res);
+              var temp = res.clone();
+              return temp.json();
+            }).then(json=>{
+                featuredMoviesInfo=json.body;
+                setFeaturedMoviesInfo(json.body);
+                console.log(featuredMoviesInfo);
+            }).catch(err=>{
+              console.log(err);
+            })
+          }
+    
+        if (featuredTvshowsInfo.length==0){
+            fetch("https://agile-mountain-03205.herokuapp.com/tvshows/featured",{
+                mode: 'cors'
+              }).then(res=>{
+            var temp = res.clone();
+            return temp.json();
+            }).then(json=>{
+                featuredTvshowsInfo=json.body;
+                setFeaturedTvshowsInfo(json.body);
+            }).catch(err=>{
+              console.log(err);
+            })
+        }
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+    
     if (heroSectionArray.length == 0 ){
         setTimeout(()=>{
             setHeroSectionArray(moviesInfo.slice(0,6).concat(tvshowsInfo.slice(0,6)));
@@ -33,18 +79,18 @@ const Homepage = () => {
             <h3>Hero section</h3>
             <Slideshow array={heroSectionArray}/>
             </div>
-            <div className="wrapper">
+            <div className="wrapper" >
             <h3>Featured movies section</h3>
-            <FeaturedSection array={moviesInfo.slice(0,6)}/>
+            <FeaturedSection array={featuredMoviesInfo}/>
             </div>
             <div className="wrapper">
             <h3>Featured TV Shows section</h3>
-            <FeaturedSection array={tvshowsInfo.slice(0,6)}/>
+            <FeaturedSection array={featuredTvshowsInfo}/>
             </div>
             <div className="wrapper">
             <h3>Content section(cinema spotlight)</h3>
             <p>
-                Section features some rather exciting shows but not enough as to be a part of the feature section above 
+                Random shows are featured here
             </p>
             <FeaturedSection array={contentSectionArray}/>
             {contentSectionArray.map((item,index)=>{

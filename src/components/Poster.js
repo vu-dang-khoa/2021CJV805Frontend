@@ -10,9 +10,8 @@ const Poster = (props) => {
     const {moviePosters,setMoviePosters} = useContext(context);
     const {tvshowPosters,setTvshowPosters} = useContext(context);
 
-    console.log(props.item);
     return (
-            <Link to={"/"+props.item.category+"/"+props.item.id}><img className={props.className} src={props.item.image} alt={props.item.title.replace(/\s/g, "")}></img></Link>
+            <Link to={"/"+props.item.category+"/"+props.item._id}><img className={props.className} src={props.item.smallPoster} alt={props.item.title.replace(/\s/g, "")}></img></Link>
     )
 }
 

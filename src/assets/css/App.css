@@ -11,10 +11,16 @@ hr{
   width:100%;
   overflow-x: hidden;
   color: white;
+  display: inline-block;
+  
 }
 
 .wrapper{
   margin-top:5em;
   margin-left:3em;
   margin-right:3em;
+}
+
+.center-content{
+  justify-content: center;
 }

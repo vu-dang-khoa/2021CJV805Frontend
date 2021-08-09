@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext} from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,27 +8,46 @@ import '../assets/css/DetailPage.css';
 import '../assets/css/App.css';
 
 const DetailPage = (props) => {
+
+    const {user,setUser} = useContext(context);
     const {moviesInfo,setMoviesInfo} = useContext(context);
     const {tvshowsInfo,setTvshowsInfo} = useContext(context);
-    const {moviePosters,setMoviePosters} = useContext(context);
-    const {tvshowPosters,setTvshowPosters} = useContext(context);
+    const [show,setShow] = useState({});
 
+    if(show._id==undefined){
+
+            fetch("https://agile-mountain-03205.herokuapp.com/"+props.item.category+"/"+props.item._id,{
+              mode: 'cors'
+            }).then(res=>{
+              var temp = res.clone();
+              return temp.json();
+            }).then(json=>{
+              setShow(json.body[0]);
+            }).then(()=>{
+            }).catch(err=>{
+              console.log(err);
+            })
+          
+    }
+    
     return (
-        <div className="mainDiv">
+        <div className="mainDiv" >
+            <div style={{backgroundImage: `url(${show.largePoster})`,maxWidth:"100%",display:"inline-block"}}>
             <Header/>
             <table>
                 <tr>
                     <td>
                         <div className="detail-wrapper">
-                            <img src={props.item.image} alt='image'></img>
+                            <img src={show.smallPoster} alt='image'></img>
                         </div>
                     </td>
                     <td>
-                        <div className="detail-wrapper">
-                            <h4 className="movie-title">{props.item.title}</h4>
+                        <div className="detail-wrapper transparent-grey-bg">
+                            <h4 className="movie-title" style={{paddingTop:"2em"}}>{show.title}</h4>
                             <br>
                             </br>
-                            <p>{props.item.description}</p>
+                            <p>{show.description}</p>
+                            <p>Rating : {show.rating}/5</p>
                         </div>
                         
                     </td>
@@ -36,13 +55,16 @@ const DetailPage = (props) => {
             </table>
             <div className="detail-wrapper" id="buttons-wrapper">
             <button className="buy-rent-button">
-                    <b>Buy : ${props.item.buy}</b>
+                    <b>Buy : ${show.buy}</b>
                 </button>
                 <button className="buy-rent-button">
-                    <b>Rent : ${props.item.rent}</b>
+                    <b>Rent : ${show.rent}</b>
                 </button>
                 </div>
             <Footer/>
+
+            </div>
+            
             
         </div>
     )

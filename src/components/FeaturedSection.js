@@ -15,7 +15,7 @@ const FeaturedSection = (props) => {
     
     var images = props.array;
     return (
-        <div className = "container">
+        <div className = "container" >
             <div className= "inner-container">
             <table>
                 <tr>

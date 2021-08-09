@@ -9,6 +9,7 @@ import '../assets/css/ListingPage.css';
 
 const ListingPage = (props) => {
 
+    const {user,setUser} = useContext(context);
     const {moviesInfo,setMoviesInfo} = useContext(context);
     const {tvshowsInfo,setTvshowsInfo} = useContext(context);
     const {moviePosters,setMoviePosters} = useContext(context);
@@ -43,8 +44,9 @@ const ListingPage = (props) => {
     return (
         <div className="mainDiv">
             <Header/>
-            <h1 className="listing-title">{title}</h1>
-            {contentTableArray ? <ContentTable key = {contentTableArray.length} array={contentTableArray}/> : null}
+                <h1 className="listing-title">{title}</h1>
+                {contentTableArray ? <ContentTable key = {contentTableArray.length} array={contentTableArray}/> : null}
+
             <Footer/>
 
             
