@@ -33,9 +33,10 @@ const SearchPage = () => {
         setFormData(e.target.value);
       };
     
-      console.log("");
       const handleSubmit = (e) => {
+          var temp = [];
           e.preventDefault();
+            setSearchResult([]);
             fetch("https://agile-mountain-03205.herokuapp.com/movies/searchTitle?contain="+encodeURI(formData),{
               mode: 'cors'
             }).then(res=>{
@@ -44,7 +45,19 @@ const SearchPage = () => {
             }).then(json=>{
                 return removeDuplicate(json.body);
             }).then(body=>{
-                setSearchResult(body);
+                temp = body;
+            }).then(()=>{
+                fetch("https://agile-mountain-03205.herokuapp.com/tvshows/searchTitle?contain="+encodeURI(formData),{
+              mode: 'cors'
+            }).then((res)=>{
+                var temp = res.clone();
+                return temp.json();
+            }).then(json=>{
+                return removeDuplicate(json.body);
+            }).then(body=>{
+                temp = temp.concat(body);
+                setSearchResult(temp);
+            })
             }).catch(err=>{
               console.log(err);
             })
