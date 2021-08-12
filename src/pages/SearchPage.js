@@ -33,6 +33,7 @@ const SearchPage = () => {
         setFormData(e.target.value);
       };
     
+      console.log("");
       const handleSubmit = (e) => {
           e.preventDefault();
             fetch("https://agile-mountain-03205.herokuapp.com/movies/searchTitle?contain="+encodeURI(formData),{
